@@ -9,3 +9,9 @@
   yum:
     name: nginx
     state: present
+
+- name: daemon off in config
+  lineinfile:
+    dest: /etc/nginx/nginx.conf
+    regexp: "daemon off"
+    line: "daemon off;"

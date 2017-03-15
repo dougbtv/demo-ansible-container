@@ -4,8 +4,8 @@ services:
     image: centos:centos7
     ports:
       - "8080:80"
-    user: nginx
-    command: [/usr/bin/dumb-init, nginx, -c, /etc/nginx/nginx.conf]
+    # user: nginx
+    command: [nginx, -c, /etc/nginx/nginx.conf]
     dev_overrides:
       ports: []
       command: bin/false
@@ -19,8 +19,8 @@ services:
     image: centos:centos7
     ports:
       - "8081:80"
-    user: nginx
-    command: [/usr/bin/dumb-init, nginx, -c, /etc/nginx/nginx.conf]
+    # user: nginx
+    command: [nginx, -c, /etc/nginx/nginx.conf]
     dev_overrides:
       ports: []
       command: bin/false
