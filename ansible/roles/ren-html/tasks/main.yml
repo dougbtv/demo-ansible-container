@@ -1,0 +1,6 @@
+---
+
+- name: template ren.html
+  template:
+    src: index.html
+    dest: /usr/share/nginx/html/index.html

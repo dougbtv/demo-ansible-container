@@ -1,0 +1,34 @@
+version: '2'
+services:
+  ren:
+    image: centos:centos7
+    ports:
+      - "8080:80"
+    user: nginx
+    command: [/usr/bin/dumb-init, nginx, -c, /etc/nginx/nginx.conf]
+    dev_overrides:
+      ports: []
+      command: bin/false
+    options:
+      kube:
+        runAsUser: 997
+        replicas: 2
+      openshift:
+        replicas: 3
+  stimpy:
+    image: centos:centos7
+    ports:
+      - "8081:80"
+    user: nginx
+    command: [/usr/bin/dumb-init, nginx, -c, /etc/nginx/nginx.conf]
+    dev_overrides:
+      ports: []
+      command: bin/false
+    options:
+      kube:
+        runAsUser: 997
+        replicas: 2
+      openshift:
+        replicas: 3
+registries: {}
+
