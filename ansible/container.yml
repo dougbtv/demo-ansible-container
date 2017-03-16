@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:80"
     # user: nginx
-    command: [nginx, -c, /etc/nginx/nginx.conf]
+    command: "nginx" # [nginx, -c, /etc/nginx/nginx.conf]
     dev_overrides:
       ports: []
       command: bin/false

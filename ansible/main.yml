@@ -5,12 +5,10 @@
     - stimpy
   roles:
     - role: nginx-install
-- hosts: 
-    - ren
+- hosts: ren
   roles:
     - role: ren-html
-- hosts: 
-    - ren
+- hosts: stimpy
   roles:
     - role: stimpy-html
 
